@@ -1,0 +1,74 @@
+:root{
+  --color-primary: #5151c3;
+  --grey-color: #f3f3f3;
+};
+
+body {
+	font-family: 'Montserrat', sans-serif !important;
+}
+.App {
+	padding-top: 50px;
+	font-family: 'Montserrat', sans-serif !important;
+	font-size: 1rem;
+}
+
+a {
+	text-decoration: none;
+}
+a.branding {
+	font-size: 1.2em;
+}
+a:hover{
+	text-decoration: none;
+}
+
+.bg-pr {
+  background: var(--color-primary) !important;
+}
+/*
+Header section
+ */
+
+
+nav.custom-nav {
+  height: 50px;
+}
+
+.custom-nav .searchForm {
+	position: relative;
+}
+
+.searchForm input {
+	height: 35px;
+	border: none;
+	outline: none;
+	box-shadow: none;
+}
+input:focus {
+	box-shadow: none;
+	outline: none;
+	border: none;
+}
+
+.searchForm button {
+	position: absolute;
+	right: 0;
+	padding: 0.25rem .75rem;
+}
+
+/*
+Books cards
+ */
+.custom-card a {
+	color: #5151c3 !important;
+}
+.book-identity {
+	justify-content: space-between;
+	font-size: 14px;
+}
+.card-title, .card-title.h5 {
+	font-size: 1.1rem;
+}
+.card-text {
+	font-size: .9em;
+}
