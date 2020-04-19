@@ -33,7 +33,7 @@ Gbooks is an online platform that consumes books from the Google Books Api and h
 
 ## Screenshot
 
-![](./public/images/mockups.png)
+![](./public/images/gbooks.png)
 
 ## Deployment
 

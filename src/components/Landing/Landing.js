@@ -1,36 +1,21 @@
 import React, { Component } from 'react';
 import Nav from '../Nav/Nav';
 
-import { Link } from 'react-router-guard';
-import { Bookmark } from '@material-ui/icons';
-import { connect } from 'react-redux';
-import { fetchBooks } from '../../redux/actions/booksActions';
-
-import Card from '../Card/Card';
 import CustomLoader from '../CustomLoader/CustomLoader';
 
 class Landing extends Component {
 
-	componentWillMount() {
-		this.props.fetchBooks();
-	}
-
 	render() {
-		const { books } = this.props;
-		console.log(books);
 		return (
 			<div className="container-fluid">
 				<Nav />
 				<CustomLoader />
-				<div className="container">
-					<div className="row mt-5">
-						{
-							this.props.books?.items.map((book, i) => (
-								<div className="col-12 col-lg-4 col-md-6 mb-4" key={i}>
-									<Card book={book}/>
-								</div>
-							))
-						}
+				<div className="w-100 d-flex justify-content-center align-items-center" style={{ height: '80vh', flexDirection: 'column' }}>
+					<div className="text-pr font-weight-bold mb-2">
+						<h4>Welcome to GBooks!</h4>
+					</div>
+					<div className="text-center">
+						You can find any book in the world here, just type the title or author of a book
 					</div>
 				</div>
 			</div>
@@ -38,10 +23,4 @@ class Landing extends Component {
 	}
 }
 
-const mapStateToProps = ({ booksReducer }) => {
-	const { books } = booksReducer;
-	console.log(books);
-	return { books };
-}
-
-export default connect(mapStateToProps, { fetchBooks })(Landing);
+export default Landing;

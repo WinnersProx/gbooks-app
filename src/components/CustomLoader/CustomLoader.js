@@ -11,7 +11,7 @@ class CustomLoader extends Component {
 		const { error, isFetching } = this.props;
 
 		const errors = error && <div>
-			An error occured, check your internet connection
+			An error occured, { error?.error?.message || 'check your internet connection' }
 		</div>;
 
 		const loading = isFetching && <div>

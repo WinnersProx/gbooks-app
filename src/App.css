@@ -5,11 +5,31 @@
 
 body {
 	font-family: 'Montserrat', sans-serif !important;
+	overflow-x: hidden;
 }
+
+/** Customize scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  
+}
+
+
 .App {
 	padding-top: 50px;
 	font-family: 'Montserrat', sans-serif !important;
 	font-size: 1rem;
+	overflow-x: hidden;
 }
 
 a {
@@ -24,6 +44,9 @@ a:hover{
 
 .bg-pr {
   background: var(--color-primary) !important;
+}
+.text-pr {
+	color: var(--color-primary);
 }
 /*
 Header section
@@ -53,6 +76,7 @@ input:focus {
 .searchForm button {
 	position: absolute;
 	right: 0;
+	top: 0;
 	padding: 0.25rem .75rem;
 }
 
@@ -71,4 +95,30 @@ Books cards
 }
 .card-text {
 	font-size: .9em;
+}
+
+/**
+ * Search results
+ */
+.search-results {
+	position: fixed;
+	top: 60px;
+	left: 15px;
+	right: 15px;
+	bottom: 20vh;
+	z-index: 1000;
+	height: 80vh;
+	overflow-y: scroll;
+	border-bottom: 1px solid #cecece;
+	font-size: .95rem;
+}
+
+.list-group-item {
+	cursor: pointer;
+}
+
+@media(max-width: 500px) {
+	.sm-invisible {
+		display: none;
+	}
 }

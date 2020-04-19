@@ -7,8 +7,9 @@ export default [
 		component: lazy(() => import('../components/Landing/Landing')),
 	},
 	{
-		path: '/',
+		path: '/book/:bookId',
 		exact: true,
-		component: lazy(() => import('../components/Nav/Nav'))
-	}
+		component: lazy(() => import('../components/BookDetails/BookDetails'))
+	},
+
 ];
